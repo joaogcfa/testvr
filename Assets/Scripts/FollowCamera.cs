@@ -30,12 +30,12 @@ public class FollowCamera : MonoBehaviour
         if (this.view.IsMine){
         
             if(isHead){
-                xyzpos = new Vector3(camera.transform.position.x,this.transform.position.y,camera.transform.position.z);
+                xyzpos = new Vector3(camera.transform.position.x,camera.transform.position.y,camera.transform.position.z);
                 this.transform.rotation = camera.transform.rotation;  //Quaternion.Euler(transform.rotation.x, transform.rotation.y, camera.transform.rotation.x);
                 this.transform.position = xyzpos;
             }
             else{
-                xzpos = new Vector3(camera.transform.position.x,this.transform.position.y,camera.transform.position.z);
+                xzpos = new Vector3(camera.transform.position.x,camera.transform.position.y - 0.8f,camera.transform.position.z);
                 this.transform.position = xzpos;
             }
 
