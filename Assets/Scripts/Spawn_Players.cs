@@ -6,7 +6,8 @@ using Photon.Pun;
 public class Spawn_Players : MonoBehaviour
 {
     public GameObject AR_player;
-    public GameObject PC_player;
+    public GameObject VR_player;
+    public GameObject Teletransport;
     private bool done1,done2;
 
     void Start()
@@ -21,7 +22,8 @@ public class Spawn_Players : MonoBehaviour
         #if UNITY_STANDALONE_WIN
 
             if(!done1){
-                PhotonNetwork.Instantiate( PC_player.name , new Vector3(0f, 0f,0f), transform.rotation * Quaternion.Euler (0f, 0f, 0f));
+                PhotonNetwork.Instantiate( VR_player.name , new Vector3(0f, 0f,0f), transform.rotation * Quaternion.Euler (0f, 0f, 0f));
+                Instantiate(Teletransport, new Vector3(0, -2f, 0), Quaternion.identity);
                 print("spawn");
             }
             done1 = true;
