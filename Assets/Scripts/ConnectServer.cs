@@ -31,13 +31,13 @@ public class ConnectServer : MonoBehaviourPunCallbacks
         
         #if UNITY_STANDALONE_WIN
             print("WINDOWS");
-            PhotonNetwork.JoinRoom("pfe-ntt-room");
+            PhotonNetwork.JoinRoom("pfe-ntt-room1");
 
         #endif
 
         #if UNITY_LUMIN
             print("Lumen");
-            PhotonNetwork.CreateRoom("pfe-ntt-room");
+            PhotonNetwork.CreateRoom("pfe-ntt-room1");
 
         #endif
 
